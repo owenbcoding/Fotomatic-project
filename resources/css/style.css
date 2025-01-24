@@ -1,4 +1,9 @@
 /* Universal Styles */
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 html {
   font-family: "Roboto", sans-serif;
@@ -10,8 +15,11 @@ html {
 }
 
 .main-content {
-  position: relative;
-  top: 5.3125rem; /* To offset for fixed header. */
+  position: absolute;
+  top: 170px;
+  left: 5.3125rem;
+  z-index: -1;
+   /* To offset for fixed header. */
 }
 
 .center {
@@ -52,6 +60,7 @@ header .content {
   align-items: center;
   padding: 1.875rem;
   justify-content: space-between;
+  height: 85px;
 }
 
 header .logo {

@@ -16,8 +16,6 @@ html {
 
 .main-content {
   position: absolute;
-  top: 170px;
-  left: 5.3125rem;
   z-index: -1;
    /* To offset for fixed header. */
 }
@@ -133,6 +131,11 @@ header .mobile {
   justify-content: flex-start;
   align-items: flex-start;
   height: 43.5rem;
+  margin-left: 0;
+  background-image: url('/resources/images/banner-landingpage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #sign-up-cta {
@@ -140,6 +143,10 @@ header .mobile {
   border: solid 1px #979797;
   border-radius: 4px;
   background-color: #9dc20b;
+  position: relative;
+  z-index: 1;
+  margin-top: 10.625rem;
+  margin-left: 6.25rem;
 }
 
 #sign-up-cta .content {

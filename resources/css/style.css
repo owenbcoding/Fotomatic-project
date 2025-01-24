@@ -5,20 +5,15 @@
   box-sizing: border-box;
 }
 
+
 html {
   font-family: "Roboto", sans-serif;
-  font-size: 24px;
-}
-
-.desktop-logo {
-  text-decoration: none;
+  font-size: 16px;
 }
 
 .main-content {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-   /* To offset for fixed header. */
+  position: relative;
+  top: 5.3125rem; /* To offset for fixed header. */
 }
 
 .center {
@@ -52,6 +47,7 @@ header {
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
+  z-index: 5;
 }
 
 header .content {
@@ -236,6 +232,7 @@ header .mobile {
 
 #features-section {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   padding: 4rem 5%;
   background-color: #f3f3f3;
@@ -248,10 +245,14 @@ header .mobile {
   background-color: white;
 }
 
-.feature .image-container {
+.feature .image-container img {
   width: 90%;
   height: 65%;
   margin: 0 auto;
+}
+
+.feature .content {
+  padding: 2.5rem 0;
 }
 
 .feature h2 {
@@ -296,6 +297,10 @@ header .mobile {
 /* Filters Section */
 
 #filters-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 4rem 0;
   padding: 4rem 0;
   background-color: #4a4a4a;
 }

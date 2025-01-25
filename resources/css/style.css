@@ -44,19 +44,6 @@ html {
 
 @media only screen and (max-width: 760px) {
 
-   /* Initially hide mobile navigation */
-   header nav ul {
-    padding: 1rem;
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 85px; /* Match header height */
-    left: 0;
-    width: 100%;
-    background-color: white;
-    border-top: 1px solid #c6c1c1;
-  }
-
   /* Show menu when active */
   header nav ul.active {
     display: flex;
@@ -121,7 +108,17 @@ header .mobile {
   display: none;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 895px) {
+  nav li:last-child {
+    display: block;
+  }
+
+  header .content {
+    padding: 1rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
   header .desktop {
     display: none;
   }
@@ -145,14 +142,8 @@ header .mobile {
   header .mobile li {
     padding: 0;
   }
-
-  header .mobile .button {
-    padding: .1875rem .5rem;
-    background-color: #9dc20b;
-    line-height: 1.6;
-    color: white;
-  }
 }
+
 
 /* Sign Up Section */
 

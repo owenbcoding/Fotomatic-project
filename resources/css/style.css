@@ -15,6 +15,8 @@ html {
   font-size: 24px;
   color: #4a4a4a;
   font-family: Roboto-Mono-Regular, sans-serif;
+  margin-right: 1rem; /* Add space between logo and hamburger menu */
+  font-size: 1.5rem; /* Adjust font size if necessary */
 }
 
 .main-content {
@@ -40,7 +42,52 @@ html {
   display: block;
 }
 
+/* Hamburger Menu Icon */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  height: 20px; /* Adjust height for better spacing */
+  width: 30px; /* Width of the hamburger menu */
+}
+
+.hamburger-menu span {
+  width: 25px;
+  height: 3px;
+  background-color: #4a4a4a;
+  transition: all 0.3s ease-in-out;
+}
+
 @media only screen and (max-width: 760px) {
+   /* Show hamburger menu on small screens */
+   .hamburger-menu {
+    display: flex;
+  }
+
+   /* Initially hide mobile navigation */
+   header nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 85px; /* Match header height */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid #c6c1c1;
+  }
+
+  /* Show menu when active */
+  header nav ul.active {
+    display: flex;
+  }
+
+  nav li {
+    padding: 1rem;
+    text-align: center;
+  }
+
   .main-content {
     top: 2.5625rem;
   }
@@ -70,11 +117,11 @@ header .logo {
 
 header nav ul {
   display: flex;
+  list-style-type: none;
 }
 
 nav li {
   padding-left: 3.5rem;
-  list-style-type: none;
 }
 
 nav a {
@@ -370,11 +417,11 @@ header .mobile {
   background-color: #f3f3f3;
 }
 
-#quotes-section content {
+#quotes-section .content {
   padding: 5rem 0;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
   font-family: "Palatino", serif;
   font-size: 1.875rem;

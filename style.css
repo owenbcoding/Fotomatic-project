@@ -147,7 +147,7 @@ header .mobile {
 
 /* Sign Up Section */
 .banner {
-  background-image: url("/assets/images/banner-landingpage.jpg");
+  background-image: url("assets/images/banner-landingpage.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
